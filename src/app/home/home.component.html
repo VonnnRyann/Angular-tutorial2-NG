@@ -1,0 +1,50 @@
+<!-- data flow bindings example -->
+
+<p>{{ homeTitle }}</p>
+
+<!-- This is how you can do a directives from the app.components -->
+<ng-content></ng-content>
+
+<!-- property binding -->
+<input [value]="myString" />
+<!-- w/o a square bracket returns normal value -->
+<input value="myString" />
+<!-- or wrap it with 2 curly braces and the result is same like square bracket-->
+<input value="{{ myString }}" />
+
+<input [required]="myBoolean" />
+<br />
+<br />
+<!-- Event Binding -->
+<!-- connecting to the logic -->
+<button (click)="alertMe()">Click me</button>
+<br />
+<br />
+<!-- passing data to logic -->
+<button (click)="alertMe1('i like it wow')">Click me1</button>
+
+<!-- Two way binding -->
+<br />
+<br />
+<!-- TODO -->
+<!-- <label>Name:</label>
+<input type="text" [(ngModel)]="person.name" />
+<label>Number:</label>
+<input [ngClass]="person.belt" /> -->
+
+<p>{{ person.name }}</p>
+<p>{{ person.belt }}</p>
+
+<br />
+<br />
+<label>Name:</label>
+<!--  -->
+<p>{{ personOne.name }}</p>
+<label>Belt:</label>
+<p>{{ personOne.belt }}</p>
+
+<br />
+<br />
+<br />
+
+<button (click)="fireEvent($event)">Hit me</button>
